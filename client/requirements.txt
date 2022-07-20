@@ -1,0 +1,5 @@
+streamlit==1.10.0
+streamlit-bokeh-events==0.1.2
+bokeh==2.4.3
+parsivar==0.2.3
+num2fawords==1.1

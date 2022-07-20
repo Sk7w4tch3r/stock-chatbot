@@ -1,0 +1,53 @@
+version: "3.1"
+
+
+session_config:
+  session_expiration_time: 60 # in minutes
+  carry_over_slots_to_new_session: false
+
+intents:
+  - greet
+  - goodbye
+  - check_human
+  - affirm
+  - deny
+  - out_of_scope
+  - gratitude
+  - exit
+  - help
+  - stop
+  - nlu_fallback
+  - stock_definitions
+  - stock_registration
+  - stock_concepts
+  - stock_company_exprs
+  - stock_trans_exprs
+  - financial_market
+  - derivatives
+  - commodities
+
+responses:
+  utter_greet:
+  - text: "سلام، روز بخیر"
+  utter_gratitude_response:
+  - text: "درود بر شما"
+  utter_help:
+  - text: "من به سوالات بورسی شما پاسخ میدم!"
+  utter_exit:
+  - text: "خدانگهدار"
+  utter_bot:
+  - text: "من به سوالات بورسی شما پاسخ میدم!"
+  utter_noworries:
+  - text: "وظیفه است 😉"
+  utter_out_of_scope:
+  - text: "متاسفانه این دستور در دسترس نیست"
+  utter_default:
+  - text: "متاسفم، مطمئن نیستم متوجه منظور شما شده باشم، ممکن هست درخواست خود را تکرار کنید؟"
+  utter_ask_rephrase:
+  - text: متاسفم، مطمئن نیستم متوجه منظورتون شده باشم، ممکن هست درخواستتون رو تکرار کنید؟
+  utter_please_rephrase:
+  - text: "متاسفم، مطمئن نیستم متوجه منظور شما شده باشم، ممکن هست درخواست خود را تکرار کنید؟"
+  
+actions:
+  - action_close_session
+  - action_stock_qa

@@ -1,0 +1,10 @@
+version: "3.1"
+
+stories:
+
+- story: stock_qa happy path
+  steps:
+  - intent: stock_qa
+  - action: action_stock_qa
+  - intent: gratitude
+  - action: utter_noworries

@@ -1,0 +1,29 @@
+version: "3.0"
+
+services:
+  rasa_core:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile_core
+    container_name: rasa_core
+    image: rasa_core
+    environment:
+      - TZ=Asia/Tehran
+    volumes:
+      - ../data:/home/services/data
+      - ../models:/home/services/models
+    ports:
+      - 5005:5005
+  
+  rasa_action:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile_action
+    container_name: rasa_action
+    image: rasa_action
+    environment:
+      - TZ=Asia/Tehran
+    volumes:
+      - ../actions:/app/actions
+    ports:
+      - 5055:5055

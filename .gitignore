@@ -1,0 +1,5 @@
+.rasa/
+models/
+*.dot
+archive/
+__pycache__/

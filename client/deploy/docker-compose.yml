@@ -1,0 +1,12 @@
+version: '3'
+services:
+  # conversation
+  web_app:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    container_name: web_app
+    image: web_app
+    environment:
+      - TZ=Asia/Tehran
+      - HOST=127.0.0.1

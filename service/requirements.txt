@@ -1,0 +1,4 @@
+rasa==3.1.0
+transformers
+torch
+sentencepiece
